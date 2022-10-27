@@ -8,14 +8,16 @@ namespace WSA_TouchHelper
    
     public partial class Main : Form
     {
-       
+        public bool shown = false;
+
 
         private KeyboardHook _keyboardHook;
       
         public Main()
         {
+
             InitializeComponent();
-            MessageBox.Show("The hotkey to get the cursor position is: F3\nPut the X value into the X Text field\nPut the Y value into the Y Text field\nDo this for as much spells you'd like to add/use.", "Information");
+            MessageBox.Show("The hotkey to get the cursor position is: F3\nPut the X value into the X Text field\nPut the Y value into the Y Text field\nDo this for as much spells you'd like to add/use.\nHOME Key: Hide WSA Touch window\nINSERT Key: Show WSA Touch window", "Information");
             InitializeKeyboardHook(); //calls the method beneath to init the Hook
             Utilities.LoggerSuccess("Loaded settings");
             X1.Text = Convert.ToString(Properties.Settings.Default.X1);
@@ -60,7 +62,7 @@ namespace WSA_TouchHelper
 
             if (pressedKey == Keys.F1)
             {
-                Utilities.LoggerInfo("F1 -> Showing Window");        
+                Utilities.LoggerInfo("F1 -> Showing Window");
                 IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
                 ForegroundWindowBypass.Set(hWnd);
 
@@ -91,7 +93,7 @@ namespace WSA_TouchHelper
 
 
             }
-           
+
             if (pressedKey == Keys.D2)
             {
                 Utilities.LoggerInfo("Hotkey #2 -> Clicking to");
@@ -188,6 +190,22 @@ namespace WSA_TouchHelper
 
 
             }
+            if (pressedKey == Keys.Insert)
+            {
+
+                Utilities.LoggerInfo("Hotkey #10 -> Showing WSA Touch");
+                this.TopMost = true;
+                this.Show();
+
+            }
+            if (pressedKey == Keys.Home)
+            {
+                Utilities.LoggerInfo("Hotkey #10 -> Hiding WSA Touch");
+                this.TopMost = false;
+                this.Hide();
+
+            }
+        
 
         }
 
