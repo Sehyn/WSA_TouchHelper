@@ -40,7 +40,7 @@
             this.X2 = new ReaLTaiizor.Controls.DreamTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Y2 = new ReaLTaiizor.Controls.DreamTextBox();
-            this.dreamButton1 = new ReaLTaiizor.Controls.DreamButton();
+            this.BtnSaveCoordinates = new ReaLTaiizor.Controls.DreamButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.X4 = new ReaLTaiizor.Controls.DreamTextBox();
@@ -76,7 +76,7 @@
             this.dreamForm1.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dreamForm1.ColorF = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dreamForm1.Controls.Add(this.label19);
-            this.dreamForm1.Controls.Add(this.dreamButton1);
+            this.dreamForm1.Controls.Add(this.BtnSaveCoordinates);
             this.dreamForm1.Controls.Add(this.groupBox1);
             this.dreamForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dreamForm1.Location = new System.Drawing.Point(0, 0);
@@ -218,21 +218,22 @@
             this.Y2.Size = new System.Drawing.Size(63, 20);
             this.Y2.TabIndex = 5;
             // 
-            // dreamButton1
+            // BtnSaveCoordinates
             // 
-            this.dreamButton1.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.dreamButton1.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.dreamButton1.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.dreamButton1.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dreamButton1.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dreamButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dreamButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.dreamButton1.Location = new System.Drawing.Point(6, 177);
-            this.dreamButton1.Name = "dreamButton1";
-            this.dreamButton1.Size = new System.Drawing.Size(148, 49);
-            this.dreamButton1.TabIndex = 10;
-            this.dreamButton1.Text = "Save cordinates";
-            this.dreamButton1.UseVisualStyleBackColor = true;
+            this.BtnSaveCoordinates.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.BtnSaveCoordinates.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.BtnSaveCoordinates.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.BtnSaveCoordinates.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnSaveCoordinates.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BtnSaveCoordinates.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSaveCoordinates.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.BtnSaveCoordinates.Location = new System.Drawing.Point(6, 177);
+            this.BtnSaveCoordinates.Name = "BtnSaveCoordinates";
+            this.BtnSaveCoordinates.Size = new System.Drawing.Size(148, 49);
+            this.BtnSaveCoordinates.TabIndex = 10;
+            this.BtnSaveCoordinates.Text = "Save coordinates";
+            this.BtnSaveCoordinates.UseVisualStyleBackColor = true;
+            this.BtnSaveCoordinates.Click += new System.EventHandler(this.BtnSaveCoordinates_Click);
             // 
             // label7
             // 
@@ -597,7 +598,7 @@
         private ReaLTaiizor.Controls.DreamTextBox Y3;
         private System.Windows.Forms.Label label12;
         private ReaLTaiizor.Controls.DreamTextBox X3;
-        private ReaLTaiizor.Controls.DreamButton dreamButton1;
+        private ReaLTaiizor.Controls.DreamButton BtnSaveCoordinates;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox1;
     }
