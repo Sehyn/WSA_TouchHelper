@@ -209,7 +209,7 @@
             this.X2.Location = new System.Drawing.Point(94, 77);
             this.X2.Name = "X2";
             this.X2.Size = new System.Drawing.Size(63, 20);
-            this.X2.TabIndex = 7;
+            this.X2.TabIndex = 5;
             // 
             // label6
             // 
@@ -236,7 +236,7 @@
             this.Y2.Location = new System.Drawing.Point(94, 105);
             this.Y2.Name = "Y2";
             this.Y2.Size = new System.Drawing.Size(63, 20);
-            this.Y2.TabIndex = 5;
+            this.Y2.TabIndex = 7;
             // 
             // BtnSaveCoordinates
             // 
@@ -291,7 +291,7 @@
             this.X4.Location = new System.Drawing.Point(252, 77);
             this.X4.Name = "X4";
             this.X4.Size = new System.Drawing.Size(63, 20);
-            this.X4.TabIndex = 18;
+            this.X4.TabIndex = 16;
             // 
             // label9
             // 
@@ -318,7 +318,7 @@
             this.Y4.Location = new System.Drawing.Point(252, 105);
             this.Y4.Name = "Y4";
             this.Y4.Size = new System.Drawing.Size(63, 20);
-            this.Y4.TabIndex = 16;
+            this.Y4.TabIndex = 18;
             // 
             // label10
             // 
@@ -421,7 +421,7 @@
             this.X6.Location = new System.Drawing.Point(411, 77);
             this.X6.Name = "X6";
             this.X6.Size = new System.Drawing.Size(63, 20);
-            this.X6.TabIndex = 28;
+            this.X6.TabIndex = 26;
             // 
             // label15
             // 
@@ -448,7 +448,7 @@
             this.Y6.Location = new System.Drawing.Point(411, 105);
             this.Y6.Name = "Y6";
             this.Y6.Size = new System.Drawing.Size(63, 20);
-            this.Y6.TabIndex = 26;
+            this.Y6.TabIndex = 28;
             // 
             // label16
             // 
@@ -581,7 +581,7 @@
             this.Y7.Location = new System.Drawing.Point(94, 47);
             this.Y7.Name = "Y7";
             this.Y7.Size = new System.Drawing.Size(63, 20);
-            this.Y7.TabIndex = 33;
+            this.Y7.TabIndex = 35;
             // 
             // label20
             // 
@@ -608,7 +608,7 @@
             this.X7.Location = new System.Drawing.Point(94, 19);
             this.X7.Name = "X7";
             this.X7.Size = new System.Drawing.Size(63, 20);
-            this.X7.TabIndex = 35;
+            this.X7.TabIndex = 33;
             // 
             // label21
             // 
@@ -646,7 +646,7 @@
             this.Y8.Location = new System.Drawing.Point(252, 47);
             this.Y8.Name = "Y8";
             this.Y8.Size = new System.Drawing.Size(63, 20);
-            this.Y8.TabIndex = 38;
+            this.Y8.TabIndex = 40;
             // 
             // label23
             // 
@@ -673,7 +673,7 @@
             this.X8.Location = new System.Drawing.Point(252, 19);
             this.X8.Name = "X8";
             this.X8.Size = new System.Drawing.Size(63, 20);
-            this.X8.TabIndex = 40;
+            this.X8.TabIndex = 38;
             // 
             // label24
             // 
@@ -711,7 +711,7 @@
             this.Y9.Location = new System.Drawing.Point(411, 48);
             this.Y9.Name = "Y9";
             this.Y9.Size = new System.Drawing.Size(63, 20);
-            this.Y9.TabIndex = 43;
+            this.Y9.TabIndex = 45;
             // 
             // label26
             // 
@@ -738,7 +738,7 @@
             this.X9.Location = new System.Drawing.Point(411, 20);
             this.X9.Name = "X9";
             this.X9.Size = new System.Drawing.Size(63, 20);
-            this.X9.TabIndex = 45;
+            this.X9.TabIndex = 43;
             // 
             // label27
             // 
@@ -806,6 +806,7 @@
             this.ClientSize = new System.Drawing.Size(510, 337);
             this.Controls.Add(this.dreamForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "WSA Touch";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
