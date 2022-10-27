@@ -15,6 +15,7 @@ namespace WSA_TouchHelper
         public Main()
         {
             InitializeComponent();
+            MessageBox.Show("The hotkey to get the cursor position is: F3\nPut the X value into the X Text field\nPut the Y value into the Y Text field\nDo this for as much spells you'd like to add/use.", "Information");
             InitializeKeyboardHook(); //calls the method beneath to init the Hook
             X1.Text = Convert.ToString(Properties.Settings.Default.X1);
             X2.Text = Convert.ToString(Properties.Settings.Default.X2);
@@ -56,7 +57,7 @@ namespace WSA_TouchHelper
                 ForegroundWindowBypass.Set(hWnd);
 
             }
-            if (pressedKey == Keys.F2)
+            if (pressedKey == Keys.D1)
             {
                 Utilities.LoggerInfo("F2 -> Clicking to");
                 Console.WriteLine("X : " + X1.Text);

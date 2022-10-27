@@ -84,7 +84,7 @@
             this.dreamForm1.Size = new System.Drawing.Size(510, 238);
             this.dreamForm1.TabIndex = 0;
             this.dreamForm1.TabStop = false;
-            this.dreamForm1.Text = "WSA_Touch";
+            this.dreamForm1.Text = "WSA Touch";
             this.dreamForm1.TitleAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dreamForm1.TitleHeight = 25;
             // 
