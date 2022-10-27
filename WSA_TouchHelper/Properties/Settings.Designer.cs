@@ -98,6 +98,42 @@ namespace WSA_TouchHelper.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int X7 {
+            get {
+                return ((int)(this["X7"]));
+            }
+            set {
+                this["X7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int X8 {
+            get {
+                return ((int)(this["X8"]));
+            }
+            set {
+                this["X8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int X9 {
+            get {
+                return ((int)(this["X9"]));
+            }
+            set {
+                this["X9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int Y1 {
             get {
                 return ((int)(this["Y1"]));
@@ -164,6 +200,42 @@ namespace WSA_TouchHelper.Properties {
             }
             set {
                 this["Y6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Y7 {
+            get {
+                return ((int)(this["Y7"]));
+            }
+            set {
+                this["Y7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Y8 {
+            get {
+                return ((int)(this["Y8"]));
+            }
+            set {
+                this["Y8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Y9 {
+            get {
+                return ((int)(this["Y9"]));
+            }
+            set {
+                this["Y9"] = value;
             }
         }
     }
