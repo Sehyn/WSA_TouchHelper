@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Reminder: 
+Those coordinates WILL change if you resize your game window.
+I'am currently working on a ImageSarch to make things more pleasant
+And easier to use gathering the spells in your spell bar and so on.</value>
+  </data>
 </root>

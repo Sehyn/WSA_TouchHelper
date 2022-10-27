@@ -1,15 +1,6 @@
 ﻿using MouseKeyboardLibrary;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace WSA_TouchHelper
@@ -61,8 +52,8 @@ namespace WSA_TouchHelper
                 IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
 
                 ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(dreamTextBox1.Text), Convert.ToInt32(dreamTextBox2.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(dreamTextBox1.Text), Convert.ToInt32(dreamTextBox2.Text)));
+                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
+                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
 
 
             }
@@ -78,6 +69,20 @@ namespace WSA_TouchHelper
                 Native.ScreenToClient(hWnd, ref lpPoint);
                 Console.WriteLine("X : " + lpPoint.X);
                 Console.WriteLine("Y : " + lpPoint.Y);
+
+            }
+            if (pressedKey == Keys.F4)
+            {
+                Utilities.LoggerInfo("F4 -> Clicking to:");
+                Console.WriteLine("X : " + X2.Text);
+                Console.WriteLine("Y : " + Y2.Text);
+
+                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+
+                ForegroundWindowBypass.Set(hWnd);
+                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
+                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
+
 
             }
 
