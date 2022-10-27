@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WSA_TouchHelper")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Dofus Touch, but like 2.0 with hotkeys!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WSA_TouchHelper")]
