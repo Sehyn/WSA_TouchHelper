@@ -13,7 +13,8 @@ namespace WSA_TouchHelper
 
 
         private KeyboardHook _keyboardHook;
-      
+      public static int press = 0;
+
         public Main()
         {
 
@@ -191,7 +192,44 @@ namespace WSA_TouchHelper
 
 
             }
-            if (pressedKey == Keys.Insert)
+            if (pressedKey == Keys.Enter)
+            {
+
+                press = press + 1;
+
+                Utilities.LoggerInfo("Hotkey #10 -> Opening chat to");
+                Console.WriteLine("X : " + X10.Text);
+                Console.WriteLine("Y : " + Y10.Text);
+                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                ForegroundWindowBypass.Set(hWnd);
+                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X10.Text), Convert.ToInt32(Y10.Text)));
+                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X10.Text), Convert.ToInt32(Y10.Text)));
+                if (press == 2)
+                {
+                    Console.WriteLine("Send message");
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X11.Text), Convert.ToInt32(Y11.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X11.Text), Convert.ToInt32(Y11.Text)));
+                    press = 0;
+
+                }
+
+            }
+
+                if (pressedKey == Keys.N)
+                {
+             
+
+                Utilities.LoggerInfo("Hotkey #12 -> Clicking to");
+                    Console.WriteLine("X : " + X12.Text);
+                    Console.WriteLine("Y : " + Y12.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X12.Text), Convert.ToInt32(Y12.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X12.Text), Convert.ToInt32(Y12.Text)));
+
+
+                }
+                if (pressedKey == Keys.Insert)
             {
 
                 Utilities.LoggerInfo("Hotkey #10 -> Showing WSA Touch");
@@ -210,8 +248,10 @@ namespace WSA_TouchHelper
 
         }
 
-        private void BtnSaveCoordinates_Click(object sender, EventArgs e)
+    
+        private void BtnSaveCoordinates_Click_1(object sender, EventArgs e)
         {
+
             Properties.Settings.Default.X1 = Convert.ToInt32(X1.Text);
             Properties.Settings.Default.X2 = Convert.ToInt32(X2.Text);
             Properties.Settings.Default.X3 = Convert.ToInt32(X3.Text);
@@ -221,6 +261,9 @@ namespace WSA_TouchHelper
             Properties.Settings.Default.X7 = Convert.ToInt32(X7.Text);
             Properties.Settings.Default.X8 = Convert.ToInt32(X8.Text);
             Properties.Settings.Default.X9 = Convert.ToInt32(X9.Text);
+            Properties.Settings.Default.X10 = Convert.ToInt32(X10.Text);
+            Properties.Settings.Default.X11 = Convert.ToInt32(X11.Text);
+            Properties.Settings.Default.X12 = Convert.ToInt32(X12.Text);
 
 
             Properties.Settings.Default.Y1 = Convert.ToInt32(Y1.Text);
@@ -232,6 +275,9 @@ namespace WSA_TouchHelper
             Properties.Settings.Default.Y7 = Convert.ToInt32(Y7.Text);
             Properties.Settings.Default.Y8 = Convert.ToInt32(Y8.Text);
             Properties.Settings.Default.Y9 = Convert.ToInt32(Y9.Text);
+            Properties.Settings.Default.Y10 = Convert.ToInt32(Y10.Text);
+            Properties.Settings.Default.Y11 = Convert.ToInt32(Y11.Text);
+            Properties.Settings.Default.Y12 = Convert.ToInt32(Y12.Text);
 
 
             Properties.Settings.Default.Save();

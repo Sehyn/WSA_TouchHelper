@@ -238,5 +238,77 @@ namespace WSA_TouchHelper.Properties {
                 this["Y9"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int X10 {
+            get {
+                return ((int)(this["X10"]));
+            }
+            set {
+                this["X10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Y10 {
+            get {
+                return ((int)(this["Y10"]));
+            }
+            set {
+                this["Y10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int X11 {
+            get {
+                return ((int)(this["X11"]));
+            }
+            set {
+                this["X11"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int X12 {
+            get {
+                return ((int)(this["X12"]));
+            }
+            set {
+                this["X12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Y11 {
+            get {
+                return ((int)(this["Y11"]));
+            }
+            set {
+                this["Y11"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Y12 {
+            get {
+                return ((int)(this["Y12"]));
+            }
+            set {
+                this["Y12"] = value;
+            }
+        }
     }
 }
