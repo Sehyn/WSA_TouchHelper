@@ -116,7 +116,7 @@
             this.dreamForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dreamForm1.Location = new System.Drawing.Point(0, 0);
             this.dreamForm1.Name = "dreamForm1";
-            this.dreamForm1.Size = new System.Drawing.Size(903, 464);
+            this.dreamForm1.Size = new System.Drawing.Size(514, 453);
             this.dreamForm1.TabIndex = 0;
             this.dreamForm1.TabStop = false;
             this.dreamForm1.Text = "WSA Touch";
@@ -1028,7 +1028,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 464);
+            this.ClientSize = new System.Drawing.Size(514, 453);
             this.Controls.Add(this.dreamForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
