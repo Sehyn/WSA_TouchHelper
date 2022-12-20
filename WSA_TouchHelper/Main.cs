@@ -1,8 +1,9 @@
 ﻿using MouseKeyboardLibrary;
 using System;
-
-
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Text;
 
 namespace WSA_TouchHelper
 {
@@ -10,6 +11,9 @@ namespace WSA_TouchHelper
     public partial class Main : Form
     {
         public bool shown = false;
+      
+
+   
 
 
         private KeyboardHook _keyboardHook;
@@ -53,22 +57,12 @@ namespace WSA_TouchHelper
 
         private void HandleKeyUp(object sender, KeyEventArgs e)
         {
-            //this gets called automatically by the KeyboardHook when ANY key is released
-            // e contains the event information
             var pressedKey = e.KeyCode;
+            IntPtr hwnd = Native.GetForegroundWindow();
+            uint processId;
+            Native.GetWindowThreadProcessId(hwnd, out processId);
+            Process process = Process.GetProcessById((int)processId);
 
-            /*
-            It would be better practice to use a "switch statement" (https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/switch)
-            instead of if and else here, but I kept it like that.
-            */
-
-            if (pressedKey == Keys.F1)
-            {
-                Utilities.LoggerInfo("F1 -> Showing Window");
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-
-            }
             if (pressedKey == Keys.F3)
             {
                 Utilities.LoggerInfo("F3 -> CursorPos:");
@@ -83,143 +77,154 @@ namespace WSA_TouchHelper
                 Console.WriteLine("Y : " + lpPoint.Y);
 
             }
-            if (pressedKey == Keys.D1)
+
+            if (process.ProcessName.ToLower() == "wsaclient")
             {
-                Utilities.LoggerInfo("Hotkey #1 -> Clicking to");
-                Console.WriteLine("X : " + X1.Text);
-                Console.WriteLine("Y : " + Y1.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
-
-
-            }
-
-            if (pressedKey == Keys.D2)
-            {
-                Utilities.LoggerInfo("Hotkey #2 -> Clicking to");
-                Console.WriteLine("X : " + X2.Text);
-                Console.WriteLine("Y : " + Y2.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X2.Text), Convert.ToInt32(Y2.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X2.Text), Convert.ToInt32(Y2.Text)));
-
-
-            }
-            if (pressedKey == Keys.D3)
-            {
-                Utilities.LoggerInfo("Hotkey #3 -> Clicking to");
-                Console.WriteLine("X : " + X3.Text);
-                Console.WriteLine("Y : " + Y3.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X3.Text), Convert.ToInt32(Y3.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X3.Text), Convert.ToInt32(Y3.Text)));
-
-
-            }
-            if (pressedKey == Keys.D4)
-            {
-                Utilities.LoggerInfo("Hotkey #4 -> Clicking to");
-                Console.WriteLine("X : " + X4.Text);
-                Console.WriteLine("Y : " + Y4.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X4.Text), Convert.ToInt32(Y4.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X4.Text), Convert.ToInt32(Y4.Text)));
-
-
-            }
-            if (pressedKey == Keys.D5)
-            {
-                Utilities.LoggerInfo("Hotkey #5 -> Clicking to");
-                Console.WriteLine("X : " + X5.Text);
-                Console.WriteLine("Y : " + Y5.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X5.Text), Convert.ToInt32(Y5.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X5.Text), Convert.ToInt32(Y5.Text)));
-
-
-            }
-            if (pressedKey == Keys.D6)
-            {
-                Utilities.LoggerInfo("Hotkey #6 -> Clicking to");
-                Console.WriteLine("X : " + X5.Text);
-                Console.WriteLine("Y : " + Y5.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X6.Text), Convert.ToInt32(Y6.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X6.Text), Convert.ToInt32(Y6.Text)));
-
-
-            }
-            if (pressedKey == Keys.X)
-            {
-                Utilities.LoggerInfo("Hotkey #7 -> Clicking to");
-                Console.WriteLine("X : " + X7.Text);
-                Console.WriteLine("Y : " + Y7.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X7.Text), Convert.ToInt32(Y7.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X7.Text), Convert.ToInt32(Y7.Text)));
-
-
-            }
-            if (pressedKey == Keys.M)
-            {
-                Utilities.LoggerInfo("Hotkey #8 -> Clicking to");
-                Console.WriteLine("X : " + X8.Text);
-                Console.WriteLine("Y : " + Y8.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X8.Text), Convert.ToInt32(Y8.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X8.Text), Convert.ToInt32(Y8.Text)));
-
-
-            }
-            if (pressedKey == Keys.I)
-            {
-                Utilities.LoggerInfo("Hotkey #9 -> Clicking to");
-                Console.WriteLine("X : " + X9.Text);
-                Console.WriteLine("Y : " + Y9.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X9.Text), Convert.ToInt32(Y9.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X9.Text), Convert.ToInt32(Y9.Text)));
-
-
-            }
-            if (pressedKey == Keys.Enter)
-            {
-
-                press = press + 1;
-
-                Utilities.LoggerInfo("Hotkey #10 -> Opening chat to");
-                Console.WriteLine("X : " + X10.Text);
-                Console.WriteLine("Y : " + Y10.Text);
-                IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
-                ForegroundWindowBypass.Set(hWnd);
-                Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X10.Text), Convert.ToInt32(Y10.Text)));
-                Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X10.Text), Convert.ToInt32(Y10.Text)));
-                if (press == 2)
+                if (pressedKey == Keys.F1)
                 {
-                    Console.WriteLine("Send message");
-                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X11.Text), Convert.ToInt32(Y11.Text)));
-                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X11.Text), Convert.ToInt32(Y11.Text)));
-                    press = 0;
+                    Utilities.LoggerInfo("F1 -> Showing Window");
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+
+                }
+               
+                if (pressedKey == Keys.D1)
+                {
+                    Utilities.LoggerInfo("Hotkey #1 -> Clicking to");
+                    Console.WriteLine("X : " + X1.Text);
+                    Console.WriteLine("Y : " + Y1.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X1.Text), Convert.ToInt32(Y1.Text)));
+
 
                 }
 
-            }
+                if (pressedKey == Keys.D2)
+                {
+                    Utilities.LoggerInfo("Hotkey #2 -> Clicking to");
+                    Console.WriteLine("X : " + X2.Text);
+                    Console.WriteLine("Y : " + Y2.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X2.Text), Convert.ToInt32(Y2.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X2.Text), Convert.ToInt32(Y2.Text)));
+
+
+                }
+                if (pressedKey == Keys.D3)
+                {
+                    Utilities.LoggerInfo("Hotkey #3 -> Clicking to");
+                    Console.WriteLine("X : " + X3.Text);
+                    Console.WriteLine("Y : " + Y3.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X3.Text), Convert.ToInt32(Y3.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X3.Text), Convert.ToInt32(Y3.Text)));
+
+
+                }
+                if (pressedKey == Keys.D4)
+                {
+                    Utilities.LoggerInfo("Hotkey #4 -> Clicking to");
+                    Console.WriteLine("X : " + X4.Text);
+                    Console.WriteLine("Y : " + Y4.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X4.Text), Convert.ToInt32(Y4.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X4.Text), Convert.ToInt32(Y4.Text)));
+
+
+                }
+                if (pressedKey == Keys.D5)
+                {
+                    Utilities.LoggerInfo("Hotkey #5 -> Clicking to");
+                    Console.WriteLine("X : " + X5.Text);
+                    Console.WriteLine("Y : " + Y5.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X5.Text), Convert.ToInt32(Y5.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X5.Text), Convert.ToInt32(Y5.Text)));
+
+
+                }
+                if (pressedKey == Keys.D6)
+                {
+                    Utilities.LoggerInfo("Hotkey #6 -> Clicking to");
+                    Console.WriteLine("X : " + X5.Text);
+                    Console.WriteLine("Y : " + Y5.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X6.Text), Convert.ToInt32(Y6.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X6.Text), Convert.ToInt32(Y6.Text)));
+
+
+                }
+                if (pressedKey == Keys.X)
+                {
+                    Utilities.LoggerInfo("Hotkey #7 -> Clicking to");
+                    Console.WriteLine("X : " + X7.Text);
+                    Console.WriteLine("Y : " + Y7.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X7.Text), Convert.ToInt32(Y7.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X7.Text), Convert.ToInt32(Y7.Text)));
+
+
+                }
+                if (pressedKey == Keys.M)
+                {
+                    Utilities.LoggerInfo("Hotkey #8 -> Clicking to");
+                    Console.WriteLine("X : " + X8.Text);
+                    Console.WriteLine("Y : " + Y8.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X8.Text), Convert.ToInt32(Y8.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X8.Text), Convert.ToInt32(Y8.Text)));
+
+
+                }
+                if (pressedKey == Keys.I)
+                {
+                    Utilities.LoggerInfo("Hotkey #9 -> Clicking to");
+                    Console.WriteLine("X : " + X9.Text);
+                    Console.WriteLine("Y : " + Y9.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X9.Text), Convert.ToInt32(Y9.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X9.Text), Convert.ToInt32(Y9.Text)));
+
+
+                }
+                if (pressedKey == Keys.Enter)
+                {
+
+                    press = press + 1;
+
+                    Utilities.LoggerInfo("Hotkey #10 -> Opening chat to");
+                    Console.WriteLine("X : " + X10.Text);
+                    Console.WriteLine("Y : " + Y10.Text);
+                    IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
+                    ForegroundWindowBypass.Set(hWnd);
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X10.Text), Convert.ToInt32(Y10.Text)));
+                    Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X10.Text), Convert.ToInt32(Y10.Text)));
+                    if (press == 2)
+                    {
+                        Console.WriteLine("Send message");
+                        Native.PostMessage(hWnd, Native.WM_LBUTTONDOWN, 1, Native.MakeLParam(Convert.ToInt32(X11.Text), Convert.ToInt32(Y11.Text)));
+                        Native.PostMessage(hWnd, Native.WM_LBUTTONUP, 0, Native.MakeLParam(Convert.ToInt32(X11.Text), Convert.ToInt32(Y11.Text)));
+                        press = 0;
+
+                    }
+
+                }
 
                 if (pressedKey == Keys.N)
                 {
-             
 
-                Utilities.LoggerInfo("Hotkey #12 -> Clicking to");
+
+                    Utilities.LoggerInfo("Hotkey #12 -> Clicking to");
                     Console.WriteLine("X : " + X12.Text);
                     Console.WriteLine("Y : " + Y12.Text);
                     IntPtr hWnd = Native.FindWindow(null, "DOFUS Touch");
@@ -230,20 +235,31 @@ namespace WSA_TouchHelper
 
                 }
                 if (pressedKey == Keys.Insert)
-            {
+                {
 
-                Utilities.LoggerInfo("Hotkey #10 -> Showing WSA Touch");
-                this.TopMost = true;
-                this.Show();
+                    Utilities.LoggerInfo("Hotkey #10 -> Showing WSA Touch");
+                    this.TopMost = true;
+                    this.Show();
 
+                }
+                if (pressedKey == Keys.Home)
+                {
+                    Utilities.LoggerInfo("Hotkey #10 -> Hiding WSA Touch");
+                    this.TopMost = false;
+                    this.Hide();
+
+                }
             }
-            if (pressedKey == Keys.Home)
-            {
-                Utilities.LoggerInfo("Hotkey #10 -> Hiding WSA Touch");
-                this.TopMost = false;
-                this.Hide();
+            //this gets called automatically by the KeyboardHook when ANY key is released
+            // e contains the event information
+          
 
-            }
+            /*
+            It would be better practice to use a "switch statement" (https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/switch)
+            instead of if and else here, but I kept it like that.
+            */
+
+    
         
 
         }

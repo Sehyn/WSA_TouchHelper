@@ -65,5 +65,9 @@ public static class Native  //moved imports into native class   //VollRagm
             return new Point(point.X, point.Y);
         }
     }
+    [DllImport("user32.dll")]
+    static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+
+    
 }
 
