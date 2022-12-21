@@ -65,12 +65,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.Y4 = new ReaLTaiizor.Controls.DreamTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Y14 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.X14 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.Y13 = new ReaLTaiizor.Controls.DreamTextBox();
             this.Y12 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.X12 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.X13 = new ReaLTaiizor.Controls.DreamTextBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.Y11 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.label41 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.X11 = new ReaLTaiizor.Controls.DreamTextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -95,16 +105,11 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.Y13 = new ReaLTaiizor.Controls.DreamTextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.X13 = new ReaLTaiizor.Controls.DreamTextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.Y14 = new ReaLTaiizor.Controls.DreamTextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.X14 = new ReaLTaiizor.Controls.DreamTextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.Y15 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.X15 = new ReaLTaiizor.Controls.DreamTextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
             this.dreamForm1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -606,6 +611,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.groupBox2.Controls.Add(this.Y15);
+            this.groupBox2.Controls.Add(this.label45);
+            this.groupBox2.Controls.Add(this.X15);
+            this.groupBox2.Controls.Add(this.label46);
+            this.groupBox2.Controls.Add(this.label47);
             this.groupBox2.Controls.Add(this.Y14);
             this.groupBox2.Controls.Add(this.label42);
             this.groupBox2.Controls.Add(this.X14);
@@ -654,6 +664,87 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Extras:";
             // 
+            // Y14
+            // 
+            this.Y14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Y14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Y14.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Y14.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Y14.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Y14.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Y14.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Y14.ColorF = System.Drawing.Color.Black;
+            this.Y14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.Y14.Location = new System.Drawing.Point(252, 165);
+            this.Y14.Name = "Y14";
+            this.Y14.Size = new System.Drawing.Size(63, 20);
+            this.Y14.TabIndex = 70;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(172, 139);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(52, 13);
+            this.label42.TabIndex = 69;
+            this.label42.Text = "Kolizéum:";
+            // 
+            // X14
+            // 
+            this.X14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.X14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X14.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.X14.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.X14.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.X14.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.X14.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.X14.ColorF = System.Drawing.Color.Black;
+            this.X14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.X14.Location = new System.Drawing.Point(252, 137);
+            this.X14.Name = "X14";
+            this.X14.Size = new System.Drawing.Size(63, 20);
+            this.X14.TabIndex = 68;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label43.ForeColor = System.Drawing.Color.White;
+            this.label43.Location = new System.Drawing.Point(230, 140);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(17, 13);
+            this.label43.TabIndex = 71;
+            this.label43.Text = "X:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(230, 167);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(17, 13);
+            this.label44.TabIndex = 72;
+            this.label44.Text = "Y:";
+            // 
+            // Y13
+            // 
+            this.Y13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Y13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Y13.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Y13.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Y13.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Y13.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Y13.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Y13.ColorF = System.Drawing.Color.Black;
+            this.Y13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.Y13.Location = new System.Drawing.Point(94, 164);
+            this.Y13.Name = "Y13";
+            this.Y13.Size = new System.Drawing.Size(63, 20);
+            this.Y13.TabIndex = 65;
+            // 
             // Y12
             // 
             this.Y12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
@@ -669,6 +760,17 @@
             this.Y12.Name = "Y12";
             this.Y12.Size = new System.Drawing.Size(63, 20);
             this.Y12.TabIndex = 60;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(2, 139);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(67, 13);
+            this.label39.TabIndex = 64;
+            this.label39.Text = "Personnage:";
             // 
             // label36
             // 
@@ -697,6 +799,22 @@
             this.X12.Size = new System.Drawing.Size(63, 20);
             this.X12.TabIndex = 58;
             // 
+            // X13
+            // 
+            this.X13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.X13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X13.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.X13.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.X13.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.X13.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.X13.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.X13.ColorF = System.Drawing.Color.Black;
+            this.X13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.X13.Location = new System.Drawing.Point(94, 136);
+            this.X13.Name = "X13";
+            this.X13.Size = new System.Drawing.Size(63, 20);
+            this.X13.TabIndex = 63;
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
@@ -707,6 +825,17 @@
             this.label37.Size = new System.Drawing.Size(17, 13);
             this.label37.TabIndex = 61;
             this.label37.Text = "X:";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(72, 139);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(17, 13);
+            this.label40.TabIndex = 66;
+            this.label40.Text = "X:";
             // 
             // label38
             // 
@@ -734,6 +863,17 @@
             this.Y11.Name = "Y11";
             this.Y11.Size = new System.Drawing.Size(63, 20);
             this.Y11.TabIndex = 55;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(72, 166);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(17, 13);
+            this.label41.TabIndex = 67;
+            this.label41.Text = "Y:";
             // 
             // label33
             // 
@@ -1044,135 +1184,70 @@
             this.label24.TabIndex = 41;
             this.label24.Text = "X:";
             // 
-            // Y13
+            // Y15
             // 
-            this.Y13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.Y13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Y13.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.Y13.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.Y13.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Y13.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Y13.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Y13.ColorF = System.Drawing.Color.Black;
-            this.Y13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.Y13.Location = new System.Drawing.Point(94, 164);
-            this.Y13.Name = "Y13";
-            this.Y13.Size = new System.Drawing.Size(63, 20);
-            this.Y13.TabIndex = 65;
+            this.Y15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Y15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Y15.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Y15.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.Y15.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Y15.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Y15.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Y15.ColorF = System.Drawing.Color.Black;
+            this.Y15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.Y15.Location = new System.Drawing.Point(411, 166);
+            this.Y15.Name = "Y15";
+            this.Y15.Size = new System.Drawing.Size(63, 20);
+            this.Y15.TabIndex = 75;
             // 
-            // label39
+            // label45
             // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(2, 139);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(67, 13);
-            this.label39.TabIndex = 64;
-            this.label39.Text = "Personnage:";
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.Location = new System.Drawing.Point(331, 140);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(56, 13);
+            this.label45.TabIndex = 74;
+            this.label45.Text = "Character:";
             // 
-            // X13
+            // X15
             // 
-            this.X13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.X13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.X13.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.X13.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.X13.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.X13.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.X13.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.X13.ColorF = System.Drawing.Color.Black;
-            this.X13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.X13.Location = new System.Drawing.Point(94, 136);
-            this.X13.Name = "X13";
-            this.X13.Size = new System.Drawing.Size(63, 20);
-            this.X13.TabIndex = 63;
+            this.X15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.X15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X15.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.X15.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.X15.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.X15.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.X15.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.X15.ColorF = System.Drawing.Color.Black;
+            this.X15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.X15.Location = new System.Drawing.Point(411, 138);
+            this.X15.Name = "X15";
+            this.X15.Size = new System.Drawing.Size(63, 20);
+            this.X15.TabIndex = 73;
             // 
-            // label40
+            // label46
             // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(72, 139);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(17, 13);
-            this.label40.TabIndex = 66;
-            this.label40.Text = "X:";
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.Location = new System.Drawing.Point(389, 141);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(17, 13);
+            this.label46.TabIndex = 76;
+            this.label46.Text = "X:";
             // 
-            // label41
+            // label47
             // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(72, 166);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(17, 13);
-            this.label41.TabIndex = 67;
-            this.label41.Text = "Y:";
-            // 
-            // Y14
-            // 
-            this.Y14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.Y14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Y14.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.Y14.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.Y14.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Y14.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Y14.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Y14.ColorF = System.Drawing.Color.Black;
-            this.Y14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.Y14.Location = new System.Drawing.Point(252, 165);
-            this.Y14.Name = "Y14";
-            this.Y14.Size = new System.Drawing.Size(63, 20);
-            this.Y14.TabIndex = 70;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(172, 139);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(52, 13);
-            this.label42.TabIndex = 69;
-            this.label42.Text = "Kolizéum:";
-            // 
-            // X14
-            // 
-            this.X14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.X14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.X14.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.X14.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.X14.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.X14.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.X14.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.X14.ColorF = System.Drawing.Color.Black;
-            this.X14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.X14.Location = new System.Drawing.Point(252, 137);
-            this.X14.Name = "X14";
-            this.X14.Size = new System.Drawing.Size(63, 20);
-            this.X14.TabIndex = 68;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(230, 140);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(17, 13);
-            this.label43.TabIndex = 71;
-            this.label43.Text = "X:";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(230, 167);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(17, 13);
-            this.label44.TabIndex = 72;
-            this.label44.Text = "Y:";
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.Location = new System.Drawing.Point(389, 168);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(17, 13);
+            this.label47.TabIndex = 77;
+            this.label47.Text = "Y:";
             // 
             // Main
             // 
@@ -1273,6 +1348,11 @@
         private ReaLTaiizor.Controls.DreamTextBox X14;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
+        private ReaLTaiizor.Controls.DreamTextBox Y15;
+        private System.Windows.Forms.Label label45;
+        private ReaLTaiizor.Controls.DreamTextBox X15;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
     }
 }
 

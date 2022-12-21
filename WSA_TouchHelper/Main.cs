@@ -41,6 +41,7 @@ namespace WSA_TouchHelper
             X12.Text = Convert.ToString(Properties.Settings.Default.X12);
             X13.Text = Convert.ToString(Properties.Settings.Default.X13);
             X14.Text = Convert.ToString(Properties.Settings.Default.X14);
+            X14.Text = Convert.ToString(Properties.Settings.Default.X15);
 
             Y1.Text = Convert.ToString(Properties.Settings.Default.Y1);
             Y2.Text = Convert.ToString(Properties.Settings.Default.Y2);
@@ -55,6 +56,7 @@ namespace WSA_TouchHelper
             Y12.Text = Convert.ToString(Properties.Settings.Default.Y12);
             Y13.Text = Convert.ToString(Properties.Settings.Default.Y13);
             Y14.Text = Convert.ToString(Properties.Settings.Default.Y14);
+            Y15.Text = Convert.ToString(Properties.Settings.Default.Y15);
 
 
         }
@@ -305,6 +307,7 @@ namespace WSA_TouchHelper
             Properties.Settings.Default.X12 = Convert.ToInt32(X12.Text);
             Properties.Settings.Default.X13 = Convert.ToInt32(X13.Text);
             Properties.Settings.Default.X14 = Convert.ToInt32(X14.Text);
+            Properties.Settings.Default.X15 = Convert.ToInt32(X15.Text);
 
             Properties.Settings.Default.Y1 = Convert.ToInt32(Y1.Text);
             Properties.Settings.Default.Y2 = Convert.ToInt32(Y2.Text);
@@ -320,6 +323,7 @@ namespace WSA_TouchHelper
             Properties.Settings.Default.Y12 = Convert.ToInt32(Y12.Text);
             Properties.Settings.Default.Y13 = Convert.ToInt32(Y13.Text);
             Properties.Settings.Default.Y14 = Convert.ToInt32(Y14.Text);
+            Properties.Settings.Default.Y15 = Convert.ToInt32(Y15.Text);
 
             Properties.Settings.Default.Save();
             Utilities.LoggerSuccess("Saved settings");
